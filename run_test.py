@@ -1,11 +1,15 @@
-"""run_test.py
+from datetime import datetime
 
-Simple test file added to run_test branch.
+now = datetime.now()
+
+output = f"""
+Run Test is Done
+
+Date: {now.strftime('%Y-%m-%d')}
+Time: {now.strftime('%H:%M:%S')}
 """
 
-def main():
-    print("Hello from run_test branch")
+print(output)
 
-
-if __name__ == "__main__":
-    main()
+with open("output.txt", "w") as f:
+    f.write(output)
